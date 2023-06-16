@@ -21,12 +21,31 @@ body {
   font-weight: bolder;
 }
 ul {
+  margin-top: 1em;
   list-style: none;
   font-size: 52px;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  align-items: center;
 }
 li {
-  padding: 30px;
+  padding: 24px;
+  margin-bottom: 1em;
   text-align: center;
+  width: fit-content;
+  border: solid 3px;
+  border-image: linear-gradient(
+    to right,
+    purple,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  border-image-slice: 1;
+  border-radius: 30px;
 }
 
 button {
@@ -69,11 +88,24 @@ img {
 }
 
 .f-video {
-  margin-top: 75px;
   text-align: center;
+  margin: 0;
 }
 
 iframe {
   display: block;
   margin-left: calc(50% - 478px);
+  margin-top: 1em;
+}
+
+.name {
+  border-radius: 1em;
+  padding: 1em;
+  margin-top: 75px;
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  box-shadow: 4px 12px #e91e63;
+  border: 1px solid #e91e63;
+  left: calc(50% - 50px);
 }
