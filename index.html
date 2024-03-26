@@ -9,19 +9,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
   <body>
-    <h1 class="center-align">박지민 나를 소개합니다</h1>
-    <img
-      src="img/p1.png"
-      alt=""
-      height="500px"
-      class="center-block z-depth-4"
-    />
-    <br />
-    <div class="nav">
-      <a href="./profile.html" id="pro">약력</a>
-      <a href="./favorite.html" id="fav">좋아하는 것</a>
+    <script src="./script.js"></script>
+    <div id="markdown-content">
+      <!-- Your Markdown content here -->
     </div>
+    <script>
+      // Get Markdown content
+      let markdownContent =
+        document.getElementById("markdown-content").innerHTML;
+
+      // Parse Markdown to HTML
+      let htmlContent = marked(markdownContent);
+
+      // Replace Markdown content with HTML
+      document.getElementById("markdown-content").innerHTML = htmlContent;
+    </script>
   </body>
 </html>
