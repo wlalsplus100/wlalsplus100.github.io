@@ -3,29 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Introduce P.Jimin</title>
+    <title>Tech Blog</title>
     <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   </head>
   <body>
+    <aside>
+      <h2>게시물</h2>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </aside>
+    <main>
+      <header>
+        <h1>기술 블로그</h1>
+      </header>
+      <section>
+        <div id="markdown-content"></div>
+      </section>
+    </main>
+    <script src="./marked.min.js"></script>
     <script src="./script.js"></script>
-    <div id="markdown-content">
-      <!-- Your Markdown content here -->
-    </div>
-    <script>
-      // Get Markdown content
-      let markdownContent =
-        document.getElementById("markdown-content").innerHTML;
-
-      // Parse Markdown to HTML
-      let htmlContent = marked(markdownContent);
-
-      // Replace Markdown content with HTML
-      document.getElementById("markdown-content").innerHTML = htmlContent;
-    </script>
   </body>
 </html>
